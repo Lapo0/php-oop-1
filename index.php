@@ -1,6 +1,6 @@
 <?php
 
-// creo una classe movie
+// CREO CLASSE MOVIE
 class Movie {
 
     public string $titol;
@@ -9,10 +9,17 @@ class Movie {
     public int $star;
 
     // creare il costruttore
-    function __constructor($_titol, $star) {
+    function __construct($_titol, $_star) {
 
+        $this->titol = $_titol;
+        $this->star = $_star;
     }
 }
+
+// ISTANZIO LA CLASSE MOVIE
+$film1 = new Movie("Bitcoin", 4);
+
+var_dump($film1);
 
 
 ?>
