@@ -40,7 +40,6 @@ $films = [
 ];
 
 
-
 ?>
 
 <!DOCTYPE html>
