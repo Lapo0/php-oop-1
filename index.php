@@ -8,6 +8,11 @@ class Movie {
     public string $description;
     public string $actor;
     public int $star;
+
+    // creare il costruttore
+    function __constructor($_titol, $star) {
+
+    }
 }
 
 
