@@ -1,25 +1,6 @@
 <?php
 
-// CREO CLASSE MOVIE
-class Movie {
-
-    public string $titol;
-    public string $image;
-    public string $description;
-    public string $actor;
-    public int $star;
-    public $gener;
-
-    public static $validGeners = ["horror", "finanza", "fantasy", "comedian"];
-
-    // creare il costruttore
-    function __construct($_titol, $_star, $_image) {
-
-        $this->titol = $_titol;
-        $this->star = $_star;
-        $this->image = $_image;
-    }
-}
+require_once "./models/movies.php";
 
 // ISTANZIO LA CLASSE MOVIE
 $film1 = new Movie("Bitcoin", 5, "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61KOkXxsAML._AC_SY450_.jpg");
