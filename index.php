@@ -1,14 +1,20 @@
 <?php
 
 require_once "./models/movies.php";
+require_once "./models/actors.php";
+
+// ISTANZIO LA CLASSE ATTORI
+$actor1 = new Actors("Satoshi", "Nakamoto", 5);
+
+$actor2 = new Actors("Bernard", "Madoff", 100);
 
 // ISTANZIO LA CLASSE MOVIE
-$film1 = new Movie("Bitcoin", 5, "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61KOkXxsAML._AC_SY450_.jpg");
+$film1 = new Movie("Bitcoin", 5, "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61KOkXxsAML._AC_SY450_.jpg", $actor1);
 $film1->gener = Movie::$validGeners[1];
 
 var_dump($film1);
 
-$film2 = new Movie("Bernard Madoff", 0, "https://www.financialounge.com/wp-content/uploads/2021/04/madoff.jpeg");
+$film2 = new Movie("Bernard Madoff", 0, "https://www.financialounge.com/wp-content/uploads/2021/04/madoff.jpeg", $actor2);
 $film2->gener = Movie::$validGeners[3];
 
 var_dump($film2);
