@@ -9,7 +9,7 @@ class Movie {
     public string $image;
     public string $description;
     public int $star;
-    public $actor;
+    public Actors $actor;
     public $gener;
 
     public static $validGeners = ["horror", "finanza", "fantasy", "comedian"];
@@ -21,6 +21,10 @@ class Movie {
         $this->star = $_star;
         $this->image = $_image;
         $this->actor = $_actor;
+    }
+
+    function getActorFullName() {
+        return $this->actor->getFullName();
     }
 }
 

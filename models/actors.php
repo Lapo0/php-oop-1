@@ -12,8 +12,10 @@ class Actors {
         $this->actorName = $_actorName;
         $this->actorSurname = $_actorSurname;
         $this->actorAge = $_actorAge;
+    }
 
-
+    function getFullName() {
+        return $this->actorName . " " . $this->actorSurname;
     }
 }
 

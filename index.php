@@ -12,12 +12,14 @@ $actor2 = new Actors("Bernard", "Madoff", 100);
 $film1 = new Movie("Bitcoin", 5, "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61KOkXxsAML._AC_SY450_.jpg", $actor1);
 $film1->gener = Movie::$validGeners[1];
 
-var_dump($film1);
+// var_dump($film1);
+var_dump($film1->getActorFullName());
 
 $film2 = new Movie("Bernard Madoff", 0, "https://www.financialounge.com/wp-content/uploads/2021/04/madoff.jpeg", $actor2);
 $film2->gener = Movie::$validGeners[3];
 
-var_dump($film2);
+// var_dump($film2);
+var_dump($film2->getActorFullName());
 
 
 // creo array di film
