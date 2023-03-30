@@ -4,26 +4,38 @@
 class Movie {
 
     public string $titol;
+    public string $image;
     public string $description;
     public string $actor;
     public int $star;
 
     // creare il costruttore
-    function __construct($_titol, $_star) {
+    function __construct($_titol, $_star, $_image) {
 
         $this->titol = $_titol;
         $this->star = $_star;
+        $this->image = $_image;
     }
+
+
 }
 
 // ISTANZIO LA CLASSE MOVIE
-$film1 = new Movie("Bitcoin", 5);
+$film1 = new Movie("Bitcoin", 5, "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61KOkXxsAML._AC_SY450_.jpg");
 
 var_dump($film1);
 
-$film2 = new Movie("Bernard Madoff", 0);
+$film2 = new Movie("Bernard Madoff", 0, "https://www.financialounge.com/wp-content/uploads/2021/04/madoff.jpeg");
 
 var_dump($film2);
+
+
+// creo array di film
+$films = [
+    $film1,
+    $film2,
+];
+
 
 
 ?>
@@ -40,13 +52,21 @@ var_dump($film2);
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <p>
-                    
-                </p>
-            </div>
-        </div>
+        <ul class="list-group row">
+            <?php foreach ($films as $film) {?>
+                <li  class="list-group-item col-5">
+                    <div class="card">
+                        <img src="<?php echo $film->image; ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $film->titol; ?></h5>
+                            <p>
+                                <?php echo $film->star ?>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            <?php } ?>
+        </ul>
     </div>
     
 </body>
